@@ -5,9 +5,8 @@
 //       console.log( nums[i], nums[x])
 //    }
 //}
-const num1 = 234
-const result = Number(String(num1).split('').reverse().join(''))
-console.log(result)
 
 
-
+for(let c of "palavra"){
+   console.log(c) 
+}
