@@ -1,10 +1,5 @@
-function isPalindrome(x: number): boolean {
-    const inverted: number = Number(String(x).split('').reverse().join(''))
-
-    if(x !== inverted){
-        return false
-    }
-    return true
+function isPalindrome(x: number): boolean {   
+    return x == Number(String(x).split('').reverse().join('')) 
 };
 
 console.log(isPalindrome(212))
