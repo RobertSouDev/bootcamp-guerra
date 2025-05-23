@@ -1,22 +1,20 @@
-
 function isValid(s: string): boolean {
-    const stringToList = s.split('')
-    const valid:boolean = false
-    for(let i = 0; i < stringToList.length; i++){
-        if(stringToList[i] === '(' ){
-            for(let x = 0; x < stringToList.length)
-        }
-        if(stringToList[i] === '[' && stringToList[i] === ']'){
-            return !valid
-        }
-
-        if(stringToList[i] === '{' && stringToList[i] === '}'){
-            return !valid
-        }
+    const stack: string[] = []
+    const pairs: {[key: string]: string} = {
+        ')': '(',
+        '}': '{',
+        ']': '['
     }
 
-    return valid
-    
-};
+    for(const c of s){
+        if(c === '(' || c === '{' || c === '[') {
+            stack.push(c)
+        }else if(c === ')' || c === '}' || c === ']'){
+            if(stack.pop() !== pairs[c])
+            return false
+        }
 
-console.log(isValid("(Robert)"))
+    }
+
+    return stack.length === 0;
+}
