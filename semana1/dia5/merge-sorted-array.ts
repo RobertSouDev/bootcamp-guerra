@@ -36,7 +36,7 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
     let i = m - 1; // Último elemento válido de nums1
     let j = n - 1; // Último elemento de nums2
     let k = m + n - 1; // Última posição de nums1
-
+z
     while (j >= 0) {
         if (i >= 0 && nums1[i] > nums2[j]) {
             nums1[k] = nums1[i];
